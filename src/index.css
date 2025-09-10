@@ -71,3 +71,68 @@ body {
 .card-button:hover {
   background-color: #0056b3;
 }
+
+/* list */
+/* Wrapper to display lists side by side */
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* wrap cards on smaller screens */
+  justify-content: center;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+}
+
+/* Card container */
+.list-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  flex: 1 1 300px; /* flexible width with minimum 300px */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Category title */
+.list-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* List styling */
+.list-container {
+  list-style: decimal inside;
+  padding-left: 0;
+}
+
+.list-item {
+  padding: 8px 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Name & color styling */
+.item-name {
+  color: #555;
+}
+
+.item-color {
+  color: #ff6347;
+}
+
+/* Responsive for very small screens */
+@media (max-width: 400px) {
+  .list-card {
+    max-width: 90%;
+  }
+}
+

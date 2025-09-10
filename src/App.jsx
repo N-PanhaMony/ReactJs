@@ -2,18 +2,13 @@ import Card from "./Card.jsx"
 import "./index.css"
 import Props from "./Props.jsx"
 import User from "./User.jsx"
+import List from "./List.jsx"
 
 function App() {
-    return(
+     return(
         <>
-            {/* <Props/>
-            <Props name="Panha" age = {22} position ={true}/>
-            <Props name="Mony" age = "20" position
-             ={false}/> */}
-
-            <User isloggedIn ={false} username="bot1"/>
-            
+            <List/>
         </>
-    )
+     )
 }
 export default App
