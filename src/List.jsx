@@ -1,5 +1,5 @@
 function List() {
-    // Fruits array
+    // ✅ Fruits array with id, name, color, and calories
     const fruits = [
         { id: 1, name: "Apple", color: "Red", calories: 52 },      
         { id: 2, name: "Banana", color: "Yellow", calories: 96 },
@@ -10,7 +10,7 @@ function List() {
         { id: 7, name: "Strawberry", color: "Red", calories: 33 }
     ];
 
-    // Vegetables array
+    // ✅ Vegetables array with id, name, color, and calories
     const vegetables = [
         { id: 1, name: "Carrot", color: "Orange", calories: 41 },
         { id: 2, name: "Broccoli", color: "Green", calories: 34 },
@@ -21,12 +21,15 @@ function List() {
         { id: 7, name: "Potato", color: "Brown", calories: 77 }
     ];
 
-    // Function to render a list
+    // ✅ Reusable function to render a list (Fruits OR Vegetables)
+    // items → the array (fruits/vegetables)
+    // category → the title (string: "Fruits" or "Vegetables")
     const renderList = (items, category) => (
         <div className="list-card">
             <h2 className="list-title">{category}</h2>
             <ol className="list-container">
                 {items.map(item => (
+                    // Each item needs a unique "key" (using id here)
                     <li key={item.id} className="list-item">
                         <span className="item-name">{item.name}</span> : &nbsp;
                         <b className="item-color">{item.color}</b>
@@ -38,7 +41,10 @@ function List() {
 
     return (
         <div className="list-wrapper">
+            {/* ✅ Only render fruits if the array is NOT empty */}
             {fruits.length > 0 && renderList(fruits, "Fruits")}
+
+            {/* ✅ Only render vegetables if the array is NOT empty */}
             {vegetables.length > 0 && renderList(vegetables, "Vegetables")}
         </div>
     );
